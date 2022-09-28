@@ -1,4 +1,4 @@
-For å kjøre prosjektet går du inn i DemoApplication.java.
+For å kjøre prosjektet går du inn i DemoApplication.java. Kjører main metoden. Da vil webapplikasjonen være tilgjengelig på localhost:8080 i din nettleser.
 
 Dette er en enkel html side med en Java-backend konfigurert med SpringBoot rammeverket.
 
