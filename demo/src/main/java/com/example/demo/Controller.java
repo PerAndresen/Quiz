@@ -27,6 +27,8 @@ public class Controller{
         );
     }
 
+
+    //Ikke i bruk
     @PostMapping("/score/plusOne")
     public int increaseScore(UserOut user){
         int scoreOut = user.getScore()+ 1;
@@ -43,6 +45,7 @@ public class Controller{
         );    
     }
 
+    //Ikke i bruk
     @GetMapping("/question/answer")
     public Boolean answer(@RequestParam String proposedAnswer, @RequestParam int index){
         if(proposedAnswer.equals(questions.getQuestion(index).getAnswer()))

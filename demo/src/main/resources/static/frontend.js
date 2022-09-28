@@ -28,6 +28,17 @@ $(document).ready(function() {
         let name="User"
         showScore(name,localScore);
     })
+    $("#popup").click(function(){
+        showPopup();
+    })
+    $("#questionAdd").click(function(){
+        let newQuestion = $("#new-question").val();
+        let newAlternative1 = $("#new-alternative1").val();
+        let newAlternative2 = $("#new-alternative2").val();
+        let newAlternative3 = $("#new-alternative3").val();
+        let newAnswer = $("#new-answer").val();
+        console.log(newQuestion);
+    }) 
 });
 
 
@@ -99,5 +110,27 @@ function showQuestion(questionOut){
     ut= questionRow + alternatives;
     $("#spmboks").html(ut); 
     console.log(ut);
+}
+
+function showPopup(){
+    let popup = window.open("about:question","question","width=200,height=200")
+    popup.onload = function() {
+        let html = `<div style="font-size:30px">Legg til spørsmål!</div>
+                    <form><label for="new-question">Spørsmål</label>
+                    <input type="text" id="new-question" name="new-question"><br><br>
+                    <label for="new-alternative1">Alternativ1</label>
+                    <input type="text" id="new-alternative1" name="new-alternative1"><br><br>
+                    <label for="new-alternative2">Alternativ2</label>
+                    <input type="text" id="new-alternative2" name="new-alternative2"><br><br>
+                    <label for="new-alternative3">Alternativ3</label>
+                    <input type="text" id="new-alternative3" name="new-alternative3"><br><br>
+                    <label for="new-answer">Answer</label>
+                    <input type="text" id="new-answer" name="new-answer"><br><br>
+                    </form><br><br>
+                    <button id="questionAdd">Legg til spørsmål</button>`
+                    ;
+        popup.document.body.insertAdjacentHTML('afterbegin', html); 
+      };
+    
 }
 
